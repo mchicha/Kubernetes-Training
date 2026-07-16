@@ -5,6 +5,7 @@
 - In this lab we will create Kubernetes deployments using declarative YAML files.
 - We will deploy nginx, scale it up and down, and observe how Kubernetes manages replicas.
 
+
 ---
 
 ## What will we learn?
