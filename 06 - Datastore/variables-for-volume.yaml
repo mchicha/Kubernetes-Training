@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thora-secrets
+  namespace: thora
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: thora-secrets
+  template:
+    metadata:
+      labels:
+        name: thora-secrets
+    spec:
+      containers:
+        - name: secrets
+          image: mordehaic/k8s-secrets-sample
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5001
+          env:
+            - name: LANGUAGE
+              valueFrom:
+                configMapKeyRef:
+                  name: language
+                  key:  LANGUAGE
+            - name: TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: token
+                  key:  TOKEN
+          # Mount the ConfigMap as a file
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+              readOnly: true
+            - name: secret-volume
+              mountPath: /etc/secrets
+              readOnly: true
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
+      volumes:
+        - name: config-volume
+          configMap:
+            name: app-config
+        - name: secret-volume
+          secret:
+            secretName: token

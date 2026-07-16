@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx3 # Name of the deployment
+  namespace: israel # Namespace where the deployment will be created
+  labels:
+    app: nginx3 # Deployment label
+spec:
+  replicas: 5
+  selector:
+    matchLabels: # Labels of the replica selector
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx # Labels fot the repplicas selector
+        version: "1.17" # Version label for the deployment
+    spec:
+      containers:
+        - name: nginx # The name of the container
+          image: nginx:1.17 # The image which will we deploy
+          ports: 
+            - containerPort: 80 # The port which will be open in the container

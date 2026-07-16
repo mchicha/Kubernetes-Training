@@ -1,0 +1,50 @@
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: my-first-ingress 
+#     #nginx.org/ssl-services: "my-service"
+# spec:
+#   ingressClassName: "nginx"
+#   tls:
+#   - hosts:
+#     - my-app.local
+#     secretName: tls-certificate
+#   rules:
+#   - host: my-app.local
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: ingress-pods
+#             port:
+#               number: 5000
+
+
+# Ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-first-ingress
+  namespace: ingress-nginx
+# annotations:
+#     kubernetes.io/ingress.class: "nginx"
+#     nginx.org/ssl-services: "my-service"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - myapp.local
+    secretName: tls-certificate
+  rules:
+    - host: myapp.local
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: ingress-pods
+              port:
+                number: 5000

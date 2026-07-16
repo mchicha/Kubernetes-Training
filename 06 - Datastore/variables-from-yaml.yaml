@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thora-secrets
+  namespace: thora
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: thora-secrets
+  template:
+    metadata:
+      labels:
+        name: thora-secrets
+    spec:
+      containers:
+        - name: secrets
+          image: mordehaic/k8s-secrets-sample
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5001
+          env:
+            - name: LANGUAGE
+              value: Hebrew
+            - name: TOKEN
+              value: Hard-To-Guess2
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: thora-secrets
+  namespace: thora
+spec:
+  selector:
+    name: thora-secrets
+  ports:
+    - protocol: TCP
+      port: 5001
+      targetPort: 5001
