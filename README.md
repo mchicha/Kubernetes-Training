@@ -65,7 +65,7 @@ This lab series covers a wide range of Kubernetes topics:
 | Lab | Topic | Description |
 |:---:|-------|-------------|
 | [05](https://nirgeier.github.io/KubernetesLabs/05-Services/) | **Services** | Expose applications with Kubernetes services |
-| [07](https://mchicha.github.io/Kubernetes-Training/07 - Nginx Ingress/) | **Nginx Ingress** | Configure ingress controllers for external access |
+| [07](https://nirgeier.github.io/KubernetesLabs/07-nginx-Ingress/) | **Nginx Ingress** | Configure ingress controllers for external access |
 | [10](https://nirgeier.github.io/KubernetesLabs/10-Istio/) | **Istio** | Implement service mesh for microservices |
 | [33](https://nirgeier.github.io/KubernetesLabs/33-NetworkPolicies/) | **NetworkPolicies** | Control traffic flow between pods |
 
@@ -219,13 +219,14 @@ Before starting these labs, you should have:
 
 ### 🚀 Ready to begin?
 
-**Start with [Lab 00: Verify Cluster](https://mchicha.github.io/Kubernetes-Training/00-VerifyCluster/) or browse the [full documentation site](https://mchicha.github.io/Kubernetes-Training/)!**
+**Start with [Lab 00: Verify Cluster](https://nirgeier.github.io/KubernetesLabs/00-VerifyCluster/) or browse the [full documentation site](https://nirgeier.github.io/KubernetesLabs/)!**
 
 <br>
 
-© [Mordehai Chicha](https://www.linkedin.com/in/mordehaic/) &emsp;|&emsp;
-[GitHub](https://github.com/mchicha/Kubernetes-Training) &emsp;|&emsp;
-[LinkedIn](https://www.linkedin.com/in/mordehaic/) &emsp;|&emsp;
-
+©2021-2025 [Nir Geier](https://www.linkedin.com/in/nirgeier/) &emsp;|&emsp;
+[GitHub](https://github.com/nirgeier/KubernetesLabs) &emsp;|&emsp;
+[LinkedIn](https://www.linkedin.com/in/nirgeier/) &emsp;|&emsp;
+[Stack Overflow](https://stackoverflow.com/users/1755598/codewizard) &emsp;|&emsp;
+[Discord](https://discord.gg/U6xW23Ss)
 
 </div>
