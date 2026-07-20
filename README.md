@@ -69,6 +69,7 @@ This lab series covers a wide range of Kubernetes topics:
 | [10](https://nirgeier.github.io/KubernetesLabs/10-Istio/) | **Istio** | Implement service mesh for microservices |
 | [33](https://nirgeier.github.io/KubernetesLabs/33-NetworkPolicies/) | **NetworkPolicies** | Control traffic flow between pods |
 
+
 ### Security
 
 | Lab | Topic | Description |
