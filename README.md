@@ -65,7 +65,7 @@ This lab series covers a wide range of Kubernetes topics:
 | Lab | Topic | Description |
 |:---:|-------|-------------|
 | [05](https://nirgeier.github.io/KubernetesLabs/05-Services/) | **Services** | Expose applications with Kubernetes services |
-| [07](https://mchicha.github.io/Kubernetes-Training/07-nginx-Ingress/) | **Nginx Ingress** | Configure ingress controllers for external access |
+| [07](https://mchicha.github.io/Kubernetes-Training/07 Nginx Ingress/) | **Nginx Ingress** | Configure ingress controllers for external access |
 | [10](https://nirgeier.github.io/KubernetesLabs/10-Istio/) | **Istio** | Implement service mesh for microservices |
 | [33](https://nirgeier.github.io/KubernetesLabs/33-NetworkPolicies/) | **NetworkPolicies** | Control traffic flow between pods |
 
